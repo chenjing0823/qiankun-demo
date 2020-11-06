@@ -29,7 +29,8 @@ npm run serve
 
 
 #### 最外层server.js脚本
-避免进入多个文件夹单独启动应用，直接写一个node脚本，一次性启动全部应用，用法
+在每个项目内都npm install过后，每次都要在相应的目录内npm run serve，
+为了避免每次启动需要三个命令，直接写一个node脚本，一次性启动全部应用，用法
 + 在最外层目录: ./qiankun-demo 目录下
 ```
 node server.js
