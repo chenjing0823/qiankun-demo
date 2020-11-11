@@ -2,7 +2,7 @@
  * @Author: jing.chen
  * @Date: 2020-11-06 13:58:56
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-11-11 13:50:22
+ * @LastEditTime: 2020-11-11 13:57:20
  * @Description: 
 -->
 ### 基于qiankun，前端微服务说明
@@ -19,6 +19,7 @@ npm run serve
 最终效果就是：在父应用页面内，可以看到里面的两个子应用服务效果类似iframe。
 <img src="https://raw.githubusercontent.com/chenjing0823/qiankun-demo/master/images/readME.gif" alt="show" />
 #### 为什么用qiankun，不用iframe
+微前端的优势不作说明，项目只提供解决方案
 可以在[官方手册](https://qiankun.umijs.org/zh)，看到更多介绍
 
 
