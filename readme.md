@@ -2,7 +2,7 @@
  * @Author: jing.chen
  * @Date: 2020-11-06 13:58:56
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-11-06 15:14:26
+ * @LastEditTime: 2020-11-11 13:50:22
  * @Description: 
 -->
 ### 基于qiankun，前端微服务说明
@@ -17,16 +17,15 @@ npm run serve
 三个服务都成功启动后，可以看到三个页面都可以单独访问。
 
 最终效果就是：在父应用页面内，可以看到里面的两个子应用服务效果类似iframe。
-
+<img src="https://raw.githubusercontent.com/chenjing0823/qiankun-demo/master/images/readME.gif" alt="show" />
 #### 为什么用qiankun，不用iframe
 可以在[官方手册](https://qiankun.umijs.org/zh)，看到更多介绍
 
 
 
 ***
-
-手动启动服务可以不看以下
-
+手动启动服务可以不看以下，这个是个人使用，所以一起扔上来了。
+***
 
 #### 最外层server.js脚本
 在每个项目内都npm install过后，每次都要在相应的目录内npm run serve，
@@ -36,6 +35,11 @@ npm run serve
 node server.js
 ```
 即可
+
+第一次运行 也需要
+```
+npm install
+```
 
 其中涉及并行和串行可以自行了解
 + async.series()
