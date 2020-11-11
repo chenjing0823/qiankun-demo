@@ -2,7 +2,7 @@
  * @Author: jing.chen
  * @Date: 2020-10-30 09:49:36
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-10-30 15:01:38
+ * @LastEditTime: 2020-11-11 11:08:39
  * @Description: 
  */
 const async = require('async');
@@ -24,8 +24,8 @@ function runServe (path, callback) {
       console.log('stdout: ' + stdout);
       console.log('stderr: ' + stderr);
   })
-  // dev.stdout.pipe(process.stdout)
-  dev.stderr.pipe(process.stderr)
+  dev.stdout.pipe(process.stdout)
+  // dev.stderr.pipe(process.stderr)
 }
 
 async.series([
