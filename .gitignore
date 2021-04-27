@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
 /dist
-
+/child-app01/node_modules
+/child-app01/node_modules
 
 # local env files
 .env.local
