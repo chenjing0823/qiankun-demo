@@ -1,3 +1,10 @@
+/*
+ * @Author: jing.chen
+ * @Date: 2020-11-06 16:15:20
+ * @LastEditors: jing.chen
+ * @LastEditTime: 2021-08-09 17:45:41
+ * @Description: 
+ */
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -9,20 +16,24 @@ import { registerMicroApps, start } from 'qiankun'
 
 Vue.config.productionTip = false
 
-const microAppNum = 2
+const microApp = [
+  { key: 1, name: '子应用1', router: 'child01', url: 'http://localhost:9010' },
+  { key: 2, name: '子应用2', router: 'child02', url: 'http://localhost:9020' }
+]
 let apps = [];
-for (let i = 1; i <= microAppNum; i++) {
+microApp.forEach(app => {
+  const { name, router, url } = app
   apps.push(
     {
-      name: '子应用child0' + i,
-      entry: 'http://localhost:90' + i + '0',
+      name: name,
+      entry: url,
       //fetch,
       container: '#vue',
-      activeRule: '/child0' + i,
-      props: { param01: i }
+      activeRule: router,
+      props: { param: app }
     }
   );
-}
+})
 const config = {
     beforeLoad: [
         app => {

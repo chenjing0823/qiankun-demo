@@ -2,14 +2,14 @@
  * @Author: jing.chen
  * @Date: 2020-10-29 16:57:52
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-11-06 15:18:02
- * @Description: 
+ * @LastEditTime: 2021-08-09 17:42:25
+ * @Description: 主应用入口
 -->
 <template>
   <div>
     <el-menu :router="true" mode="horizontal">
       <el-menu-item index="/">首页</el-menu-item>
-      <el-menu-item v-for="no in  microAppNum" :key="no" :index="'/child0'+no">子应用0{{no}}</el-menu-item>
+      <el-menu-item v-for="app in  microApp" :key="app.key" :index="app.router">{{ app.name }}</el-menu-item>
     </el-menu>
     <router-view />
     <!-- 子应用入口 -->
@@ -22,7 +22,10 @@ export default {
   name: "main01",
   data() {
     return {
-      microAppNum: 2
+      microApp: [
+        { key: 1, name: '子应用1', router: 'child01' },
+        { key: 2, name: '子应用2', router: 'child02' }
+      ]
     };
   },
 };
