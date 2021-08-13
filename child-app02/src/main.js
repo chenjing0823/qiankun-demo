@@ -1,8 +1,8 @@
 /*
  * @Author: jing.chen
  * @Date: 2020-10-29 17:15:53
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-27 16:12:11
+ * @LastEditors: jing.chen
+ * @LastEditTime: 2021-08-09 19:16:43
  * @Description: 
  */
 import Vue from 'vue'
@@ -30,12 +30,13 @@ if (window.__POWERED_BY_QIANKUN__) {
  * 通常我们可以在这里做一些全局变量的初始化，比如不会在 unmount 阶段被销毁的应用级别的缓存等。
  */
 export async function bootstrap(props) {
-  console.log('react app bootstraped');
+  console.log('vue sub app bootstrap ', props);
 }
 /**
  * 应用每次进入都会调用 mount 方法，通常我们在这里触发应用的渲染方法
  */
 export async function mount(props) {
+  console.log("react-sub2 props from main framework", props);
   render(props);
 
   // react

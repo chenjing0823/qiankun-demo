@@ -2,7 +2,7 @@
  * @Author: jing.chen
  * @Date: 2020-11-06 16:15:20
  * @LastEditors: jing.chen
- * @LastEditTime: 2021-08-09 17:45:41
+ * @LastEditTime: 2021-08-13 15:27:23
  * @Description: 
  */
 import Vue from 'vue'
@@ -30,7 +30,13 @@ microApp.forEach(app => {
       //fetch,
       container: '#vue',
       activeRule: router,
-      props: { param: app }
+      props: { 
+        test_param: {
+          userid: 111,
+          corpid: 222
+        },
+        app
+      }
     }
   );
 })
